@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "4isto-life"
+version = "0.1.0"
+description = ""
+authors = ["MattheusBy <mattaudia6@gmail.com>"]
+readme = "README.md"
+packages = [{include = "4isto_life"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
