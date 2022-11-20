@@ -9,6 +9,12 @@ packages = [{include = "4isto_life"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 Flask = "^2.2.2"
+requests = "^2.28.1"
+telegram = "^0.0.1"
+python-telegram-bot = "^13.14"
+pyTelegramBotAPI = "^4.7.1"
+telebot = "^0.0.4"
+viberbot = "^1.0.12"
 
 
 [build-system]
