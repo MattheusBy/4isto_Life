@@ -141,7 +141,7 @@ body > section,
 ==========================================*/
 
 #navigation {
-  background-color: rgba(16, 22, 54, 0.2);
+  background-color: #1ea78d;
   border: 0 none;
   margin: 0;
   
@@ -714,7 +714,7 @@ label.error {
 
 .copyright {
   color: #fff;
-  margin-top: 100px;
+  margin-top: 25px;
 }
 
 #back-top {
