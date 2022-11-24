@@ -323,6 +323,64 @@ top: -8px;
 }
 
 
+/*=========================================
+	Process
+==========================================*/
+
+.process {
+  background-color: #f4f7f9;
+}
+
+.owl-controls {
+  bottom: -45px;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.owl-controls .owl-page {
+  display: inline-block;
+}
+
+.owl-controls .owl-page span {
+  border: 1px solid #C7CED3;
+  border-radius: 20px;
+  display: block;
+  height: 8px;
+  margin: 5px 4px;
+  width: 8px;
+}
+
+.owl-controls .owl-page.active span {
+  background: #062033;
+  border: 0;
+}
+
+.service-icon {
+  border: 1px solid #0eb493;
+  border-radius: 50%;
+  color: #0eb493;
+  float: left;
+  padding: 10px 13px;
+}
+
+.service-desc {
+  margin-left: 70px;
+  position: relative;
+  top: 5px;
+}
+
+.service-desc h3 {
+  color: #062033;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.process p {
+	text-align: justify; 
+	font-size: 17px;
+}
 
 
 /*=========================================
