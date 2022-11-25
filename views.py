@@ -34,5 +34,9 @@ def contacts():
     return render_template('contacts.html')
 
 
+@app.route('/calendar')
+def calendar():
+    return render_template("calendar.html")
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
