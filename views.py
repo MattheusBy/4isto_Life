@@ -38,5 +38,11 @@ def contacts():
 def calendar():
     return render_template("calendar.html")
 
+
+@app.route('/order')
+def order():
+    return render_template("order.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
