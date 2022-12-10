@@ -1,0 +1,124 @@
+{% extends "base.html"%}
+{%block content%}
+<section id="features" class="features" style="margin-top:50px">
+			<div class="container" style="height:auto">
+				<div class="row">
+					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
+						<h2>Получить цену</h2>
+					</div>
+                    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <!-- Name input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Ваше имя</label>
+          <div class="col-md-4">
+          <input id="name" name="name" type="text" placeholder="Имя" class="form-control input-md">
+          </div>
+        </div>
+         <!-- End Name input-->
+        <!-- Phone input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Номер телефона(Viber/Telegram)</label>
+          <div class="col-md-4">
+          <input id="textinput" name="phone" type="text" placeholder="Телефон с кодом" class="form-control input-md">
+          </div>
+        </div>
+        <!-- End Phone input-->
+        <!-- City input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="city">Ваш населенный пункт</label>
+          <div class="col-md-4">
+            <select id="city" name="city" class="form-control">
+              <option value="Гомель">Гомель</option>
+              <option value="Район">Гомельский район</option>
+              <option value="Другое">Другой город</option>
+            </select>
+          </div>
+        </div>
+         <!-- End City input-->
+        <!-- Item input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="item">Изделие</label>
+          <div class="col-md-4">
+            <select id="item" name="item" class="form-control">
+              <option value="Двухместный диван">Двухместный диван</option>
+              <option value="Трехместный диван">Трехместный диван</option>
+              <option value="Угловой диван">Угловой диван</option>
+              <option value="Нестандартный диван">Нестандартный диван</option>
+              <option value="Кресло">Кресло</option>
+              <option value="Стул">Стул</option>
+              <option value="Кухонный уголок">Кухонный уголок</option>
+              <option value="Пуф">Пуф</option>
+            </select>
+          </div>
+        </div>
+        <!-- End Item input-->
+        <!-- Count input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="count">Количество</label>
+          <div class="col-md-4">
+            <select id="count" name="count" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="Более 4х">Другое</option>
+            </select>
+          </div>
+        </div>
+        <!-- End Count input-->
+        <!-- Photo input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="photo">Фото</label>
+          <div class="col-md-4">
+            <input id="photo" name="photo" class="input-file" type="file" required="false">
+          </div>
+        </div>
+        <!-- End Photo input-->
+        <!-- Urine input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="urine">Запах/пятна мочи</label>
+          <div class="col-md-4">
+            <select id="urine" name="urine" class="form-control">
+              <option value="нет">Нет</option>
+              <option value="есть">Есть</option>
+            </select>
+          </div>
+        </div>
+        <!-- End Urine input-->
+        <!-- Drying input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="drying">Сушка</label>
+          <div class="col-md-4">
+            <select id="drying" name="drying" class="form-control">
+              <option value="нет">Нет</option>
+              <option value="да">Да</option>
+            </select>
+          </div>
+        </div>
+        <!-- End Drying input-->
+        <!-- Pillow input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="drying">Чистка подушек</label>
+          <div class="col-md-4">
+            <select id="pillows" name="pillows" class="form-control">
+              <option value="нет">Нет</option>
+              <option value="да">Да</option>
+            </select>
+          </div>
+        </div>
+        <!-- End Pillow input-->
+        <!-- Send Button -->
+            <div class="form-group">
+              <div class="col-md-12" align="center">
+                <button id="send_form_button" name="send_form_button" class="btn btn-primary" style="color:#fff; background-color:#1ea78d">Отправить</button>
+              </div>
+            </div>
+        </fieldset>
+        </form>
+        <!-- End Send Button -->
+    </div>
+</div>
+</section>
+
+{%endblock%}

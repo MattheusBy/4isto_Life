@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  nginx:
+    restart: always
+    build: ./nginx/
+    ports:
+      - "80:80"
+    volumes:
+      - web-static:/www/static
+    links:
+      - web:web
+  
+  web:
+    restart: always
+    build: ./web
+    expose:
+      - "5000"
+    volumes:
+      - app:/usr/src/app
+      - static:/usr/src/app/static
+    env_file: web/pyproject.toml
+    environment:
+      DEBUG: 'true'
+    command: poetry run gunicorn gunicorn_config:application -w 2 -b :8080
+
+volumes:
+  app:
+  static:
+  web-static:
