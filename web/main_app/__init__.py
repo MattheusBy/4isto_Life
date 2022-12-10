@@ -1,5 +1,6 @@
 """
-This package creates Flask-application and sets necessary configuration.
+This package creates Flask-application and sets configuration.
+It contains view-fuctions for renders templates ant its url-routes
 """
 
 import os
