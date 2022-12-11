@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------4istoLIFE --------------------------------------------------------------------
 
 11/12/2022
+
 Author: Matsvei Malchanau
 
 Email: matsvey.malchanau.python@gmail.com
@@ -27,7 +28,7 @@ of the cost of cleaning. The data will send to the telegram-bot and the manager 
 you can find the cleaning schedule and choose the appropriate date and time for you. 
 On the tab "contacts" you can find instant messengers for communication.
 
---------------------------------------------------------------------------Technologies-----------------------------------------------------------------
+--------------------------------------------------------------------------Technologies----------------------------------------------------------------
 
 - Flask (base)
 - Poetry (virtual enviroment)
