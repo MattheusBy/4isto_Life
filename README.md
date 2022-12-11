@@ -5,6 +5,7 @@ Author: Matsvei Malchanau
 Email: matsvey.malchanau.python@gmail.com
 LinkedIn: www.linkedin.com/in/matsvey-malchanau
 Github: github.com/MattheusBy
+
 --------------------------------------------------------------------------Description--------------------------------------------------------------------
 
 The purpose of this project is to study and apply technologies and simulate a real commercial project. 
