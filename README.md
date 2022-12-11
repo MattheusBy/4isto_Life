@@ -1,4 +1,4 @@
---------------------------------------------------------------------------4istoLIFE ---------------------------------------------------------------------
+--------------------------------------------------------------------------4istoLIFE --------------------------------------------------------------------
 
 11/12/2022
 Author: Matsvei Malchanau
@@ -9,7 +9,7 @@ LinkedIn: www.linkedin.com/in/matsvey-malchanau
 
 Github: github.com/MattheusBy
 
---------------------------------------------------------------------------Description--------------------------------------------------------------------
+--------------------------------------------------------------------------Description------------------------------------------------------------------
 
 The purpose of this project is to study and apply technologies and simulate a real commercial project. 
 I have experience in dry cleaning of upholstered furniture and understand the tasks and functionality that are needed for such a site. I tried to realize
@@ -27,7 +27,7 @@ of the cost of cleaning. The data will send to the telegram-bot and the manager 
 you can find the cleaning schedule and choose the appropriate date and time for you. 
 On the tab "contacts" you can find instant messengers for communication.
 
---------------------------------------------------------------------------Technologies-------------------------------------------------------------------
+--------------------------------------------------------------------------Technologies-----------------------------------------------------------------
 
 - Flask (base)
 - Poetry (virtual enviroment)
@@ -40,6 +40,6 @@ On the tab "contacts" you can find instant messengers for communication.
 - Bandit (check security)
 - Bootstarap 5
 
----------------------------------------------------------------------------Gratitude---------------------------------------------------------------------
+---------------------------------------------------------------------------Gratitude-------------------------------------------------------------------
 
 - Bootstrapmade (https://bootstrapmade.com/)
