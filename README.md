@@ -44,3 +44,4 @@ On the tab "contacts" you can find instant messengers for communication.
 ---------------------------------------------------------------------------Gratitude-------------------------------------------------------------------
 
 - Bootstrapmade (https://bootstrapmade.com/)
+- Svgwave (https://svgwave.in/)
