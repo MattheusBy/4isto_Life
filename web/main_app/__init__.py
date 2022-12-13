@@ -67,4 +67,8 @@ def create_app(test_config=None):
         # views-function for order-page
         return render_template("order.html")
 
+    @app.errorhandler(404)
+    def invalid_route(e):
+        return render_template("404.html")
+
     return app
