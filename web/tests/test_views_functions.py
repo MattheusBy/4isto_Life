@@ -73,7 +73,7 @@ def test_get_price(client):
     response = client.get('/get_price')
     assert response.status_code==200
     # send POST-request to localhost
-    url = "http://127.0.0.1:8080/get_price"
+    url = "http://127.0.0.1:5038/get_price"
     # dict with test data in POST-request
     payload_1 = {'name': 'Alex',
                'phone': '+375291111111',
@@ -108,6 +108,14 @@ def test_get_price(client):
     assert bytes('15 минут', encoding='utf-8') in response.content
 
 def test_request_send(client):
-    # sends request to request_send-page and checks response. Direct request response is error 404
+    # sends request to request_send_page and checks response. Direct request response is error 404
     response = client.get('/request_send')
-    assert response.status_code==404
+    assert response.status_code==200
+    assert b"url('static/img/errors_images/404_back.png')" in response.data
+
+
+def test_error_handler_404(client):
+    response = client.get('/some_text')
+    assert response.status_code==200
+    assert b"url('static/img/errors_images/404_back.png')" in response.data
+

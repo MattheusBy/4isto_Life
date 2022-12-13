@@ -71,4 +71,8 @@ def create_app(test_config=None):
     def invalid_route(e):
         return render_template("404.html")
 
+    @app.errorhandler(500)
+    def invalid_route(e):
+        return render_template("500.html")
+
     return app
