@@ -3,7 +3,7 @@ Module creates app-instance and client-instance to simulate interaction "server-
 """
 
 import pytest
-from main_app import create_app
+from web.main_app import create_app
 
 
 @pytest.fixture

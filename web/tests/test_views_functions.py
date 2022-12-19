@@ -3,13 +3,15 @@ Module contains tools for testing view-functions
 """
 
 import requests
-from main_app import create_app
+
+from web.main_app import create_app
 
 
 def test_config():
     # create Flask-application instance for test
     assert not create_app().testing
     assert create_app({'TESTING': True}).testing
+
 
 
 def test_index(client):
@@ -73,7 +75,7 @@ def test_get_price(client):
     response = client.get('/get_price')
     assert response.status_code==200
     # send POST-request to localhost
-    url = "http://127.0.0.1:5038/get_price"
+    url = "http://127.0.0.1:5000/get_price"
     # dict with test data in POST-request
     payload_1 = {'name': 'Alex',
                'phone': '+375291111111',
@@ -85,7 +87,7 @@ def test_get_price(client):
                'pillows': 'да'}
     # add image in POST-request
     files = [
-        ('photo', ('img_for_test.jpg', open('tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
+        ('photo', ('img_for_test.jpg', open('web/tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
     ]
     response = requests.request("POST", url, data=payload_1, files=files)
     assert response.status_code==200
@@ -100,7 +102,7 @@ def test_get_price(client):
                'pillows': 'нет'}
     # add image in POST-request
     files = [
-        ('photo', ('img_for_test.jpg', open('tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
+        ('photo', ('img_for_test.jpg', open('web/tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
     ]
     response = requests.request("POST", url, data=payload_2, files=files)
     assert response.status_code == 200
