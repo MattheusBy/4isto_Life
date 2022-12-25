@@ -10,7 +10,7 @@ def test_button_index():
     driver.find_element(By.LINK_TEXT, "Главная").click()
     WebDriverWait(driver, 2)
     assert 'Наши работы' in driver.page_source
-    assert 'Применяем качественную химию со знаком качества' in driver.page_source
+    assert 'Применяем качественную химию' in driver.page_source
     assert 'В нашем штате работают опытные специалисты' in driver.page_source
 
 
@@ -52,7 +52,7 @@ def test_button_calendar():
     WebDriverWait(driver, 2)
     assert 'Расписание чисток' in driver.page_source
     assert 'https://calendar.google.com/calendar' in driver.page_source
-    assert 'Здесь Вы можете ознакомиться с расписанием чисток' in driver.page_source
+    assert 'Здесь Вы можете ознакомиться' in driver.page_source
 
 
 def test_button_contacts():
@@ -76,13 +76,15 @@ def test_button_get_price():
 
 
 def test_form_get_price():
-    # test form for send data to telegram on
-    #page "get_price"
+    # test form for send data to
+    # telegram on page "get_price"
     driver.get("http://127.0.0.1:5000/get_price")
     driver.find_element(By.NAME, "name").send_keys('Ivan')
     driver.find_element(By.NAME, "phone").send_keys("+375291111111")
     driver.find_element(By.NAME, "city").send_keys("1")
-    driver.find_element(By.NAME, "photo").send_keys("/home/matvey/projects/4istoLIFE/web/tests/img_for_test.jpg")
+    driver.find_element(By.NAME, "photo").send_keys(
+        "/home/matvey/projects/4istoLIFE/web/tests/img_for_test.jpg"
+        )
     # above string required absolute path to image for uplaod it
     driver.find_element(By.NAME, "urine").send_keys("нет")
     driver.find_element(By.NAME, "drying").send_keys("нет")
@@ -91,4 +93,3 @@ def test_form_get_price():
     WebDriverWait(driver, 2)
     assert 'Ожидайте' in driver.page_source
     assert 'Ожидайте SMS' in driver.page_source
-
