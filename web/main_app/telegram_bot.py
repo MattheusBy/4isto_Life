@@ -37,9 +37,10 @@ def send_to_telegram():
         token=TOKEN, chat_id=CHAT_ID)
     files = [
         ('photo',
-         ('imageToSave.jpeg', open('main_app/uploaded_image/imageToSave.jpeg', 'rb'), 'image/jpeg'))
+         ('imageToSave.jpeg',
+            open('main_app/uploaded_image/imageToSave.jpeg', 'rb'), 'image/jpeg')
+         )
     ]
-    payload = {}
     headers = {}
 
     response_photo = requests.request("POST", url_photo, headers=headers, files=files)

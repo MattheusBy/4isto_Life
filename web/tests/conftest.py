@@ -1,5 +1,6 @@
 """
-Module creates app-instance and client-instance to simulate interaction "server-client"
+Module creates app-instance and client-instance
+to simulate interaction "server-client"
 """
 
 import pytest
@@ -19,5 +20,3 @@ def app():
 def client(app):
     # create client instance to simulate client's requests
     return app.test_client()
-
-
