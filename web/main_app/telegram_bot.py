@@ -5,6 +5,8 @@
    in his telegram-account associated with telegram-bot and can
    send back actual price to user use SMS.
 """
+import os
+
 import requests
 from flask import request
 
@@ -14,8 +16,10 @@ def send_to_telegram():
     data = request.form.to_dict()
     request.files["photo"].save("main_app/uploaded_image/imageToSave.jpeg")
     # CHAT_ID and TOKEN provides permissions to send data to owner's app
-    CHAT_ID = '-1001599179085'
-    TOKEN = "5661560876:AAERwxrmUbxPBmvD54-Ootboe_cbclyva1s"
+    # CHAT_ID = '-1001599179085'
+    CHAT_ID = os.environ.get('CHAT_ID')
+    # TOKEN = "5661560876:AAERwxrmUbxPBmvD54-Ootboe_cbclyva1s"
+    TOKEN = os.environ.get('TOKEN')
     # Create message-body
     message = "От:{0}\n Телефон {1}. \n " \
               "Населенный пункт: {2}. \n " \
