@@ -2,7 +2,6 @@
 Module creates app-instance and client-instance
 to simulate interaction "server-client"
 """
-
 import pytest
 from web.main_app import create_app
 
