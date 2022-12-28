@@ -1,7 +1,7 @@
 --------------------------------------------------------------------- 4istoLIFE ------------------------------------------------------------
 
 11/12/2022
-Author: Matsvei Malchanau
+Author: Matsvey Malchanau
 Email: matsvey.malchanau.python@gmail.com
 LinkedIn: www.linkedin.com/in/matsvey-malchanau
 Github: github.com/MattheusBy
@@ -37,4 +37,3 @@ You can find a description of the company, examples of work on the index-page. T
 - Bootstrapmade (https://bootstrapmade.com/)
 - Removebg (https://www.remove.bg/)
 - Canva (https://www.canva.com)
--

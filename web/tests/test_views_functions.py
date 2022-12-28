@@ -3,6 +3,7 @@ Module contains tools for testing view-functions
 """
 
 import requests
+
 from web.main_app import create_app
 
 
