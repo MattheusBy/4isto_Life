@@ -19,18 +19,21 @@ You can find a description of the company, examples of work on the index-page. T
 
 ---------------------------------------------------------------------Technologies-----------------------------------------------------------
 
-- Flask (base)
-- Poetry (virtual enviroment)
-- Telebot (Telegram-bot for send price request)
+- Flask
+- Poetry (virtual environment)
+- Telegram API
 - Pytest
+- Selenium 4
 - Coverage
 - Docker/Docker-compose
 - Waitress
 - Nginx
 - Bandit (check security)
-- Bootstarap 5
+- Bootstrap 5
+- Flake8
 
 --------------------------------------------------------------------Gratitude--------------------------------------------------------------
 
 - Bootstrapmade (https://bootstrapmade.com/)
 - Removebg (https://www.remove.bg/)
+- Canva (https://www.canva.com)

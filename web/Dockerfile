@@ -1,7 +1,7 @@
-FROM python:3.10
+FROM python:3.8.2
 
 # Configure Poetry
-ENV POETRY_VERSION=1.2.1
+ENV POETRY_VERSION=1.3.0
 ENV POETRY_HOME=/opt/poetry
 ENV POETRY_VENV=/opt/poetry-venv
 ENV POETRY_CACHE_DIR=/opt/.cache
@@ -22,9 +22,9 @@ RUN poetry install --no-root --no-ansi
 
 # Run your app
 COPY . /app
-EXPOSE 5000:5000
-ENTRYPOINT [ "poetry", "run", "python3", "views.py" ]
+EXPOSE 8080:8080
+# ENTRYPOINT ['export','FLASK_APP','=','main_app']
+# ENTRYPOINT [ "poetry", "run", "flask", "--app", "main_app", "run"]
 
 
-
-# sudo docker run -d -p 5000:5000 --name 4isto --network My_Net --user matvey@Inspiron-5565
+# poetry run waitress-serve --port=5055 --call "main_app:create_app"

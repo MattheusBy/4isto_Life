@@ -2,8 +2,8 @@
 This package creates Flask-application and sets configuration.
 It contains view-fuctions for renders templates ant its url-routes
 """
-
 import os
+
 from flask import Flask, render_template, request
 from web.main_app.telegram_bot import send_to_telegram
 
