@@ -22,9 +22,10 @@ RUN poetry install --no-root --no-ansi
 
 # Run your app
 COPY . /app
-EXPOSE 8080:8080
+EXPOSE 5000
+CMD poetry run gunicorn --bind 0.0.0.0:8000 "main_app:create_app()"
 # ENTRYPOINT ['export','FLASK_APP','=','main_app']
 # ENTRYPOINT [ "poetry", "run", "flask", "--app", "main_app", "run"]
 
 
-# poetry run waitress-serve --port=5055 --call "main_app:create_app"
+# poetry run waitress-serve --port=5000 --call "main_app:create_app"
