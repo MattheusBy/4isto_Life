@@ -21,9 +21,8 @@ WORKDIR /app
 COPY poetry.lock pyproject.toml ./
 RUN poetry install --no-root --no-ansi
 
-# Run your app
 COPY . /app
 
 EXPOSE 5000
-
+# Run your app
 CMD poetry run gunicorn --bind 0.0.0.0:8000 "main_app:create_app()"
