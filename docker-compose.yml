@@ -1,28 +1,26 @@
-version: '3'
+version: '3.9'
 
 services:
   nginx:
-    restart: always
-    build: ./nginx/
+    build: ./nginx
     ports:
-      - "80:80"
-    volumes:
-      - web-static:/www/static
-    links:
-      - web:web
-  
+      - 80:80
+    depends_on:
+      - web
   web:
     restart: always
     build: ./web
-    expose:
-      - "5000"
+    ports:
+      - 8000:80
     volumes:
       - app:/usr/src/app
       - static:/usr/src/app/static
     env_file: web/pyproject.toml
     environment:
       DEBUG: 'true'
-    command: poetry run gunicorn gunicorn_config:application -w 2 -b :8080
+      TOKEN: "5661560876:AAERwxrmUbxPBmvD54-Ootboe_cbclyva1s"
+      CHAT_ID: "-1001599179085"
+    command: poetry run gunicorn -w 4 -b 0.0.0.0:8000 "main_app:create_app()"
 
 volumes:
   app:

@@ -6,6 +6,7 @@ ENV POETRY_HOME=/opt/poetry
 ENV POETRY_VENV=/opt/poetry-venv
 ENV POETRY_CACHE_DIR=/opt/.cache
 
+
 # Install poetry separated from system interpreter
 RUN python3 -m venv $POETRY_VENV \
     && $POETRY_VENV/bin/pip install -U pip setuptools \
@@ -22,9 +23,7 @@ RUN poetry install --no-root --no-ansi
 
 # Run your app
 COPY . /app
-EXPOSE 8080:8080
-# ENTRYPOINT ['export','FLASK_APP','=','main_app']
-# ENTRYPOINT [ "poetry", "run", "flask", "--app", "main_app", "run"]
 
+EXPOSE 5000
 
-# poetry run waitress-serve --port=5055 --call "main_app:create_app"
+CMD poetry run gunicorn --bind 0.0.0.0:8000 "main_app:create_app()"

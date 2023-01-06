@@ -4,7 +4,7 @@ Module contains tools for testing view-functions
 
 import requests
 
-from web.main_app import create_app
+from main_app import create_app
 
 
 def test_config():
@@ -89,7 +89,7 @@ def test_get_price(client):
                  'pillows': 'да'}
     # add image in POST-request
     files = [
-        ('photo', ('img_for_test.jpg', open('web/tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
+        ('photo', ('img_for_test.jpg', open('tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
     ]
     response = requests.request("POST", url, data=payload_1, files=files)
     assert response.status_code == 200
@@ -104,7 +104,7 @@ def test_get_price(client):
                  'pillows': 'нет'}
     # add image in POST-request
     files = [
-        ('photo', ('img_for_test.jpg', open('web/tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
+        ('photo', ('img_for_test.jpg', open('tests/img_for_test.jpg', 'rb'), 'image/jpeg'))
     ]
     response = requests.request("POST", url, data=payload_2, files=files)
     assert response.status_code == 200

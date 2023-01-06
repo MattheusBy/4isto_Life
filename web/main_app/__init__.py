@@ -5,7 +5,7 @@ It contains view-fuctions for renders templates ant its url-routes
 import os
 
 from flask import Flask, render_template, request
-from web.main_app.telegram_bot import send_to_telegram
+from main_app.telegram_bot import send_to_telegram
 
 
 def create_app(test_config=None):

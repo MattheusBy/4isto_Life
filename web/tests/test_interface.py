@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(r"tests/chromedriver")
 
 
 def test_button_index():
