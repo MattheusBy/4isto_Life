@@ -26,7 +26,7 @@ You can find a description of the company, examples of work on the index-page. T
 - Selenium 4
 - Coverage
 - Docker/Docker-compose
-- Waitress
+- Gunicorn
 - Nginx
 - Bandit (check security)
 - Bootstrap 5
